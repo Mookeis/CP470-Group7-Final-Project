@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.cp470group7.launcherapp.pricemanager.ItemSearchActivity;
 import com.google.android.material.snackbar.Snackbar;
 
+//TODO: Everyone needs to replace their respective titles and icons in the string.xml as well as add your app in a subfolder
 public class MainActivity extends AppCompatActivity implements MainPageFragment.OnFragmentInteractionListener {
 
     protected Toolbar mainToolbar;
