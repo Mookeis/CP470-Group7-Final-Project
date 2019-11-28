@@ -8,17 +8,20 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.cp470group7.launcherapp.pricemanager.ItemSearchActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 //TODO: Everyone needs to replace their respective titles and icons in the string.xml as well as add your app in a subfolder
 public class MainActivity extends AppCompatActivity implements MainPageFragment.OnFragmentInteractionListener {
 
     protected Toolbar mainToolbar;
+    protected BottomNavigationView bottomNavigationView;
     protected static String ACTIVITY_NAME = "MainActivity";
 
     @Override
@@ -32,6 +35,34 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
             getSupportActionBar().setTitle("CP470");
         }
         mainToolbar.setBackgroundColor(Color.parseColor("#80000000"));
+
+        bottomNavigationView = findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int selected_id = menuItem.getItemId();
+                switch(selected_id){
+                    case R.id.apmBottomBarButton:
+                        Intent startAmazonPriceManagerIntent = new Intent(MainActivity.this, ItemSearchActivity.class);
+                        startActivityForResult(startAmazonPriceManagerIntent, 10);
+                        break;
+                    case R.id.ermanBottomButton:
+                        //TODO: replace with erman module intent
+                        break;
+                    case R.id.stuartBottomButton:
+                        //TODO: replace with stuart module intent
+                        break;
+                    case R.id.anthonyBottomButton:
+                        //TODO: replace with anthony module intent
+                        break;
+                    case R.id.joshBottomButton:
+                        //TODO: replace with joshua module intent
+                        break;
+                }
+                return false;
+            }
+        });
+
 
         MainPageFragment mainPageFragment = new MainPageFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

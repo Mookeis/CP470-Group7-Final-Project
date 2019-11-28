@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/amazonPriceManagerButton"
+        android:id="@+id/apmBottomBarButton"
         android:title="@string/amazonPriceManagerAbbr"
         android:icon="@drawable/baseline_shop_24"
          />
 
     <item
-        android:id="@+id/ermanButton"
+        android:id="@+id/ermanBottomButton"
         android:title="@string/ermanTitle"
         android:icon="@drawable/baseline_shop_24"
          />
     <item
-        android:id="@+id/stuartButton"
+        android:id="@+id/stuartBottomButton"
         android:title="@string/stuartTitle"
         android:icon="@drawable/baseline_shop_24"
          />
     <item
-        android:id="@+id/anthonyButton"
+        android:id="@+id/anthonyBottomButton"
         android:title="@string/anthonyTitle"
         android:icon="@drawable/baseline_shop_24"
          />
     <item
-        android:id="@+id/joshButton"
+        android:id="@+id/joshBottomButton"
         android:title="@string/joshTitle"
         android:icon="@drawable/baseline_shop_24"
          />
