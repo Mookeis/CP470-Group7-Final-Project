@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">LauncherApp</string>
+    <string name="mainPageTitle">Application Guide:</string>
+    <string name="mainPageText">
+        This is the launcher page for Group 7\'s application.
+        To navigate to the five different sections of the application, select any of the 5 buttons in the action bar above.
+        Each button corresponds to a separate section of the application. These sections include:\n\n
+        Amazon Price Manager\n
+        Erman Section\n
+        Stuart Section\n
+        Anthony Section\n
+        Joshua Section\n\n
+        These sections may also be accessed from the bottom bar below.
+    </string>
+    <string name="groupName">Group 7</string>
+
+    <string name="amazonPriceManagerTitle">Amazon Price Manager</string>
+    <string name="amazonPriceManagerAbbr">APM</string>
+    <string name="searchBarLabel">Search for item:</string>
+    <string name="searchBarHint">Link</string>
+    <string name="searchButton">Search</string>
+    <string name="mainAboutAction">About</string>
+    <string name="resultsSearchLabel">Search</string>
+    <string name="retailerInformationTitle">Offer Listings</string>
+    <string name="addWatchListTitle">Add to Watchlist</string>
+    <string name="mainInfoButton">Information</string>
+    <string name="helpTitle">Guide to using Amazon Price Manager:</string>
+    <string name="helpText">
+        The main page has 1 entry field which takes 1 type of search query: an Amazon Item link
+        \n
+        Links should be formatted such that they appear as:\n
+        https://amazon.ca (com, com.uk, etc.)/dp/itemID
+        \n
+        For example: https://www.amazon.ca/dp/product/B07SXMZLP9\n
+
+        Any link may be turned into this by stripping off the excess after the item ID in the URL.\n
+        Upon submitting a search query, there will be an attempted connection to server to retrieve the data required.\n
+        One may also access their watchlist using the action button in the bottom left corner of the page.
+    </string>
+    <string name="amazonPriceManagerAuthorName">Mackenzie Dang</string>
+    <string name="watchlistTitle">Watchlist</string>
+    <string name="deleteItemLabel">Delete</string>
+
+    <string name="ermanTitle">Erman Title</string>
+
+
+    <string name="stuartTitle">Stuart Title</string>
+
+
+    <string name="anthonyTitle">Anthony Title</string>
+
+
+    <string name="joshTitle">Joshua Title</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

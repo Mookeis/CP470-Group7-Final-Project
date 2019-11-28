@@ -1,0 +1,4 @@
+var interfacecom_1_1dang6960_1_1pricemanager_1_1_item_listing_fragment_1_1_on_list_fragment_interaction_listener =
+[
+    [ "onListFragmentInteraction", "interfacecom_1_1dang6960_1_1pricemanager_1_1_item_listing_fragment_1_1_on_list_fragment_interaction_listener.html#a8dc613238f4c0e781d8da1f0467e3db1", null ]
+];
