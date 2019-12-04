@@ -44,21 +44,26 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                 int selected_id = menuItem.getItemId();
                 switch(selected_id){
                     case R.id.apmBottomBarButton:
+                        menuItem.setChecked(true);
                         Intent startAmazonPriceManagerIntent = new Intent(MainActivity.this, ItemSearchActivity.class);
                         startActivityForResult(startAmazonPriceManagerIntent, 10);
                         break;
                     case R.id.ermanBottomButton:
                         //TODO: replace with erman module intent
+                        menuItem.setChecked(true);
                         break;
                     case R.id.stuartBottomButton:
+                        menuItem.setChecked(true);
                         Intent startTripPlanner = new Intent(MainActivity.this, TripLogin.class);
                         startActivity(startTripPlanner);
                         //TODO: replace with stuart module intent
                         break;
                     case R.id.anthonyBottomButton:
                         //TODO: replace with anthony module intent
+                        menuItem.setChecked(true);
                         break;
                     case R.id.joshBottomButton:
+                        menuItem.setChecked(true);
                         //TODO: replace with joshua module intent
                         break;
                 }

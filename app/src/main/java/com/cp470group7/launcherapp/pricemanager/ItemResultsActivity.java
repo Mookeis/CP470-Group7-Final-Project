@@ -98,7 +98,7 @@ public class ItemResultsActivity extends AppCompatActivity implements ItemListin
     protected TextView urlTextView;
 
     protected String ACTIVITY_NAME = "ItemResultsActivity";
-    protected static String DEVELOPER_TOKEN = "94bdeb1c76d98591ce7df853c67feb1c";
+    protected static String DEVELOPER_TOKEN = "434a60337dc73bbb235ddc5c6612a887";
     protected SQLiteDatabase watchlistDb;
 
     protected Intent changeActivityIntent;
@@ -165,6 +165,8 @@ public class ItemResultsActivity extends AppCompatActivity implements ItemListin
                         resultsProgressBar.setVisibility(View.VISIBLE);
                         resultsProgressBar.bringToFront();
                         if (item != null) {
+                            searchBundle = new Bundle();
+                            changeActivityIntent = new Intent(ItemResultsActivity.this, ListingsActivity.class);
                             SellerRequest sr = new SellerRequest(AmazonItem.generateListingPageLink(item.getItemASIN()));
                             sr.execute();
                         }
@@ -387,6 +389,7 @@ public class ItemResultsActivity extends AppCompatActivity implements ItemListin
                 InputStream is = conn.getInputStream();
                 publishProgress(75);
                 String response = convertStreamToString(is);
+                Log.d(ACTIVITY_NAME, response);
                 if(response.contains("\"error\":")){
                     Pattern p = Pattern.compile("\"([^\"]*)\"");
                     Matcher m = p.matcher(response);
