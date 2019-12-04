@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ErmanloginBackground"
+    tools:context=".musicLocal.ErmanMarkerActivity">
+
+    <TextView
+        android:id="@+id/ErmanMarkerTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="temp Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ErmanMarkerTextView2"
+        android:layout_width="347dp"
+        android:layout_height="202dp"
+        android:layout_marginTop="68dp"
+        android:text="description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ErmanMarkerTextView1" />
+
+    <TextView
+        android:id="@+id/ErmanMarkerTextView3"
+        android:layout_width="129dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="60dp"
+        android:text="Upcoming Events:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ErmanMarkerTextView2" />
+
+    <TextView
+        android:id="@+id/ErmanMarkerTextView4"
+        android:layout_width="153dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="136dp"
+        android:text="event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ErmanMarkerTextView3" />
+
+    <Button
+        android:id="@+id/ErmanFavButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:text="@string/ErmanAddToFavText"
+        android:backgroundTint="@color/ErmanloginButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ErmanMarkerTextView4" />
+</androidx.constraintlayout.widget.ConstraintLayout>

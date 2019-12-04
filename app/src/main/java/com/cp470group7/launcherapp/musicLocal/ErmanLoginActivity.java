@@ -21,7 +21,7 @@ public class ErmanLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_erman_login);
         emailEditText = (EditText)findViewById(R.id.ErmanloginEmailEditText);
 
-
+        //save email so it will show up again after the app is reponed
         SharedPreferences getSP = getSharedPreferences("DefaultEmail", Context.MODE_PRIVATE);
         String defaultEmail = getResources().getString(R.string.ErmanDefaultEmailText);
         String emailText = getSP.getString(String.valueOf(R.string.ErmanSavedEmailText),defaultEmail);
