@@ -6,8 +6,8 @@
         To navigate to the five different sections of the application, select any of the 5 buttons in the action bar above.
         Each button corresponds to a separate section of the application. These sections include:\n\n
         Amazon Price Manager\n
-        Erman Section\n
-        Stuart Section\n
+        Music Local\n
+        Trip Planner\n
         Anthony Section\n
         Joshua Section\n\n
         These sections may also be accessed from the bottom bar below.
@@ -95,9 +95,12 @@
     <string name="ErmanloginTitle2">Local</string>
     <string name="ErmantempText">This button will be used to add to your favourites</string>
     <string name="ErmansettingsAboutText">Author: Erman Dinsel\nVersion: 2.0\nInstructions: Turn on your location within your Android
-    device\'s settings. When the location prompt shows up, allow the app to use your device\'s location. Now, find a nearby venue
-    on the map and select it. You can view information about the upcoming shows and choose to add that venue to your favourites,
-    which is accessible from the toolbar.</string>
+    device\'s settings. When the location prompt shows up, allow the app to use your device\'s location. Next, find a nearby venue
+    on the map and select the marker. Now you can choose to select the title of the marker for more information. You can view information about the upcoming shows and choose to add that venue to your favourites,
+    which is accessible from the toolbar. There is a bug that prevents the very first element to be added to favourites from
+    being added to favourites. However, after the first attempt, the next times the user adds to favourites it works fine.
+    Also, I was not able to make the app get nearby venues from the user\'s location. So, I made a preset json object.
+    The app parses the json and returns a couple of venues and their information.</string>
     <string name="Ermanok">Ok</string>
     <string name="ErmanloginEmail">Email Address</string>
     <string name="ErmanloginPassword">Password</string>
@@ -105,10 +108,14 @@
     <string name="Ermantitle_activity_map_view">Map</string>
     <string name="ErmanDefaultEmailText">email@domain.com</string>
     <string name="ErmanSavedEmailText"> </string>
-
+    <string name="ErmanAddToFavText">Add to Favourites</string>
+    <string name="ErmanAddedToFavText">Added to Favourites</string>
+    <string name="ErmanDeleteFavText">Delete From Favourites</string>
     <string name="ErmanhelpText">Help</string>
     <string name="Ermantitle_activity_erman_maps">Map</string>
     <string name="title_activity_erman_maps">Map</string>
+    <string name="ErmanFavouritesText">Favourites</string>
+    <string name="ErmanThankYouText">Thank you for using this app!</string>
 
 
 </resources>

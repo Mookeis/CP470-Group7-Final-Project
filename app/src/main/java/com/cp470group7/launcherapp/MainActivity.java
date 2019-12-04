@@ -50,10 +50,11 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                         startActivityForResult(startAmazonPriceManagerIntent, 10);
                         break;
                     case R.id.ermanBottomButton:
+                        menuItem.setChecked(true);
                         Intent startMusicLocal = new Intent(MainActivity.this, ErmanLoginActivity.class);
                         startActivity(startMusicLocal);
                         //TODO: replace with erman module intent
-                        menuItem.setChecked(true);
+
                         break;
                     case R.id.stuartBottomButton:
                         menuItem.setChecked(true);

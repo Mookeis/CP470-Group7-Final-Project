@@ -7,10 +7,16 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -31,7 +37,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -44,6 +52,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.util.ArrayList;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -58,7 +67,13 @@ public class ErmanMapsActivity extends AppCompatActivity implements OnMapReadyCa
     private double[][] coordinates = new double[4][2];
     private String[] description = new String[4];
     private String[] events = new String[4];
-
+    private String checkFav = "False";
+    private SQLiteDatabase database;
+    private ErmanFavDatabaseHelper dbH;
+    private String[] allItems = { ErmanFavDatabaseHelper.KEY_ID,
+            ErmanFavDatabaseHelper.KEY_MESSAGE };
+    private Cursor cursor;
+    private ArrayList<String> array;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,8 +88,16 @@ public class ErmanMapsActivity extends AppCompatActivity implements OnMapReadyCa
         vq.execute();
 
         setSupportActionBar(toolbar);
-
-
+        dbH = new ErmanFavDatabaseHelper(this);
+        database = dbH.getWritableDatabase();
+        array = new ArrayList<>();
+        cursor = database.query(dbH.TABLE_NAME,allItems, null, null, null, null, null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast() ) {
+            array.add(cursor.getString(cursor.getColumnIndex(ErmanFavDatabaseHelper.KEY_MESSAGE)));
+            cursor.moveToNext();
+        }
+        cursor.close();
     }
 
     public boolean onCreateOptionsMenu(Menu m){
@@ -85,10 +108,11 @@ public class ErmanMapsActivity extends AppCompatActivity implements OnMapReadyCa
     public boolean onOptionsItemSelected(MenuItem mi){
         switch (mi.getItemId()){
             case R.id.Erman_action_one:
-                Toast toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.ErmantempText), Toast.LENGTH_LONG);
-                toast.show();
+                Intent intent = new Intent(ErmanMapsActivity.this,ErmanFavouritesActivity.class);
+                startActivity(intent);
                 break;
             case R.id.Erman_settings:
+                //Build custom dialog
                 AlertDialog.Builder builder = new AlertDialog.Builder(ErmanMapsActivity.this);
                 LayoutInflater inflater = ErmanMapsActivity.this.getLayoutInflater();
                 View view = inflater.inflate(R.layout.erman_custom_dialog, null);
@@ -96,6 +120,8 @@ public class ErmanMapsActivity extends AppCompatActivity implements OnMapReadyCa
                 // Add positive button (which doesn't do anything but get rid of the dialog box)
                 builder.setPositiveButton(R.string.Ermanok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        Snackbar.make(findViewById(android.R.id.content).getRootView(), getResources().getString(R.string.ErmanThankYouText), Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
                     }
                 });
                 // Create the AlertDialog
@@ -110,6 +136,8 @@ public class ErmanMapsActivity extends AppCompatActivity implements OnMapReadyCa
         @Override
         protected String doInBackground(String... strings) {
             try {
+                //I wasn't able to get the app to find the venues close to the user's location
+                //So, I made a preset json object at the link below and the app parses the json to get some venues
                 URL url = new URL("https://api.myjson.com/bins/16p9us");
                 HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
                 conn.setReadTimeout(10000);
@@ -180,6 +208,7 @@ public class ErmanMapsActivity extends AppCompatActivity implements OnMapReadyCa
             return "";
         }
 
+        //update progress bar
         @Override
         protected void onProgressUpdate(Integer... values){
             progressBar.setVisibility(View.VISIBLE);
@@ -188,6 +217,7 @@ public class ErmanMapsActivity extends AppCompatActivity implements OnMapReadyCa
 
         @Override
         protected void onPostExecute(String a){
+            //get rid of progress bar and put in the tool bar
             progressBar.setVisibility(View.INVISIBLE);
             toolbar.setVisibility(View.VISIBLE);
             // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -253,9 +283,70 @@ public class ErmanMapsActivity extends AppCompatActivity implements OnMapReadyCa
         }
 
 
+        //on click listener for when the user clicks on the title of the marker
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                String venueName = marker.getTitle();
+                String event = "";
+                String descript = "";
+                int index = 0;
+                //Get the index of the name of the venue in the array, which is used to get the events and description
+                for(int i = 0; i < venues.length; i++){
+                    if(venues[i].equals(venueName)){
+                        index = i;
+                        break;
+                    }
+                }
+
+                event = events[index];
+                descript = description[index];
+                String[] send = new String[3];
+                send[0] = venueName;
+                send[1] = descript;
+                send[2] = event;
+
+
+                Intent intent = new Intent(ErmanMapsActivity.this,ErmanMarkerActivity.class);
+                intent.putExtra("Response", send);
+                startActivityForResult(intent,10);
+                //if marker activity returns true, add the current venue to the database
+                if(checkFav.equals("True")){
+                    ContentValues values = new ContentValues();
+                    values.put(ErmanFavDatabaseHelper.KEY_MESSAGE,venueName);
+                    long insertId = database.insert(ErmanFavDatabaseHelper.TABLE_NAME, null,
+                            values);
+                    Cursor cursor = database.query(ErmanFavDatabaseHelper.TABLE_NAME,
+                            allItems, ErmanFavDatabaseHelper.KEY_ID + " = " + insertId, null,
+                            null, null, null);
+                    cursor.moveToFirst();
+                    cursor.close();
+                    array.add(venueName);
+                }
+
+                checkFav = "False";
+
+            }
+        });
+
+
 
 
 
 
     }
+    //get the response message from marker activity to determine whether to add current venue to favourites
+    @SuppressLint("MissingSuperCall")
+    protected void onActivityResult(int requestCode, int responseCode, Intent data) {
+        if (requestCode == 10){
+            if(responseCode == RESULT_OK){
+                String messagePassed = data.getStringExtra("Response");
+                checkFav = messagePassed;
+            }
+
+        }
+    }
+
+
 }
