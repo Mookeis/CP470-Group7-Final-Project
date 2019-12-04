@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                         Intent startMusicLocal = new Intent(MainActivity.this, ErmanLoginActivity.class);
                         startActivity(startMusicLocal);
                         //TODO: replace with erman module intent
-                        
+
                         break;
                     case R.id.stuartBottomButton:
                         menuItem.setChecked(true);

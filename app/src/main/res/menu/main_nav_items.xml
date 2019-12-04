@@ -9,7 +9,7 @@
     <item
         android:id="@+id/ermanBottomButton"
         android:title="@string/ermanTitle"
-        android:icon="@drawable/baseline_shop_24"
+        android:icon="@drawable/baseline_music_note_24"
          />
     <item
         android:id="@+id/stuartBottomButton"
