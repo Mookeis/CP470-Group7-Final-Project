@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripPlanner.TripLogin">
+
+    <TextView
+        android:id="@+id/tripTitle"
+        android:layout_width="170dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="121dp"
+        android:text="@string/tripPlannerTitle"
+        android:textColor="#389CDD"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tripLoginEdit"
+        android:layout_width="311dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="29dp"
+        android:hint="@string/tripLoginHint"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripLoginText" />
+
+    <TextView
+        android:id="@+id/tripLoginText"
+        android:layout_width="114dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="249dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/tripLoginText"
+        app:layout_constraintBottom_toTopOf="@+id/tripLoginEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripTitle" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="102dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="258dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/tripPasswordText"
+        app:layout_constraintBottom_toTopOf="@+id/tripPasswordEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripLoginEdit" />
+
+    <EditText
+        android:id="@+id/tripPasswordEdit"
+        android:layout_width="307dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="56dp"
+        android:hint="@string/tripPasswordHint"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/tripLoginButton"
+        android:layout_width="151dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="130dp"
+        android:text="@string/tripLoginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripPasswordEdit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
