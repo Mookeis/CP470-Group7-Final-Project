@@ -14,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.cp470group7.launcherapp.musicLocal.ErmanLoginActivity;
+import com.cp470group7.launcherapp.TripPlanner.TripLogin;
 import com.cp470group7.launcherapp.pricemanager.ItemSearchActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -44,20 +45,28 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                 int selected_id = menuItem.getItemId();
                 switch(selected_id){
                     case R.id.apmBottomBarButton:
+                        menuItem.setChecked(true);
                         Intent startAmazonPriceManagerIntent = new Intent(MainActivity.this, ItemSearchActivity.class);
                         startActivityForResult(startAmazonPriceManagerIntent, 10);
                         break;
                     case R.id.ermanBottomButton:
                         Intent startMusicLocal = new Intent(MainActivity.this, ErmanLoginActivity.class);
                         startActivity(startMusicLocal);
+                        //TODO: replace with erman module intent
+                        menuItem.setChecked(true);
                         break;
                     case R.id.stuartBottomButton:
+                        menuItem.setChecked(true);
+                        Intent startTripPlanner = new Intent(MainActivity.this, TripLogin.class);
+                        startActivity(startTripPlanner);
                         //TODO: replace with stuart module intent
                         break;
                     case R.id.anthonyBottomButton:
                         //TODO: replace with anthony module intent
+                        menuItem.setChecked(true);
                         break;
                     case R.id.joshBottomButton:
+                        menuItem.setChecked(true);
                         //TODO: replace with joshua module intent
                         break;
                 }
@@ -98,6 +107,8 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                 break;
             case R.id.stuartButton:
                 //TODO: replace with stuart module intent
+                Intent startTripPlanner = new Intent(MainActivity.this, TripLogin.class);
+                startActivity(startTripPlanner);
                 break;
             case R.id.anthonyButton:
                 //TODO: replace with anthony module intent

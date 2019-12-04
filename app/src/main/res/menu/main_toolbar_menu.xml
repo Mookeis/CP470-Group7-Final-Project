@@ -15,8 +15,8 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/stuartButton"
-        android:title="@string/stuartTitle"
-        android:icon="@drawable/baseline_shop_24"
+        android:title="@string/tripPlannerTitle"
+        android:icon="@drawable/baseline_directions_boat_24"
         app:showAsAction="always" />
     <item
         android:id="@+id/anthonyButton"
