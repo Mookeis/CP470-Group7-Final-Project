@@ -41,7 +41,7 @@
     <string name="watchlistTitle">Watchlist</string>
     <string name="deleteItemLabel">Delete</string>
 
-    <string name="ermanTitle">Erman Title</string>
+    <string name="ermanTitle">music Local</string>
 
 
     <string name="stuartTitle">Stuart Title</string>
@@ -54,6 +54,26 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="ErmanloginTitle1">music</string>
+    <string name="ErmanloginTitle2">Local</string>
+    <string name="ErmantempText">This button will be used to add to your favourites</string>
+    <string name="ErmansettingsAboutText">Author: Erman Dinsel\nVersion: 2.0\nInstructions: Turn on your location within your Android
+    device\'s settings. When the location prompt shows up, allow the app to use your device\'s location. Now, find a nearby venue
+    on the map and select it. You can view information about the upcoming shows and choose to add that venue to your favourites,
+    which is accessible from the toolbar.</string>
+    <string name="Ermanok">Ok</string>
+    <string name="ErmanloginEmail">Email Address</string>
+    <string name="ErmanloginPassword">Password</string>
+    <string name="ErmanloginButtonText">Login</string>
+    <string name="Ermantitle_activity_map_view">Map</string>
+    <string name="ErmanDefaultEmailText">email@domain.com</string>
+    <string name="ErmanSavedEmailText"> </string>
+
+    <string name="ErmanhelpText">Help</string>
+    <string name="Ermantitle_activity_erman_maps">Map</string>
+    <string name="title_activity_erman_maps">Map</string>
 
 
 </resources>

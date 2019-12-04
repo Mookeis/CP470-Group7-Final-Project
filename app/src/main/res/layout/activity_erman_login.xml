@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".musicLocal.ErmanLoginActivity"
+    android:background="@color/ErmanloginBackground">
+
+    <TextView
+        android:id="@+id/ErmanappNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="480dp"
+        android:fontFamily="@font/slackey"
+        android:text="@string/ErmanloginTitle1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/ErmanloginButton"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="@+id/ErmanimageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
+
+    <TextView
+        android:id="@+id/ErmanappNameTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="480dp"
+        android:fontFamily="@font/slackey"
+        android:text="@string/ErmanloginTitle2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ErmanimageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ErmanappNameTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
+
+    <EditText
+        android:id="@+id/ErmanloginEmailEditText"
+        android:layout_width="260sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="@string/ErmanloginEmail"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/ErmantextHint"
+        app:layout_constraintBottom_toTopOf="@+id/ErmanloginPasswordEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
+
+    <Button
+        android:id="@+id/ErmanloginButton"
+        android:layout_width="321dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="160dp"
+        android:background="@color/ErmanloginButton"
+        android:text="@string/ErmanloginButtonText"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/ErmanloginPasswordEditText"
+        android:layout_width="260sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+
+        android:hint="@string/ErmanloginPassword"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/ErmantextHint"
+        app:layout_constraintBottom_toTopOf="@+id/ErmanloginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ErmanimageView3"
+        android:layout_width="286dp"
+        android:layout_height="247dp"
+        android:background="@drawable/ermanloginpic"
+        app:layout_constraintBottom_toTopOf="@+id/ErmanloginPasswordEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ErmanappNameTextView2"
+        app:layout_constraintVertical_bias="0.431" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

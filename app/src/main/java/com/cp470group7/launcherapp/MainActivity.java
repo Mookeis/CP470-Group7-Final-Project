@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.cp470group7.launcherapp.musicLocal.ErmanLoginActivity;
 import com.cp470group7.launcherapp.pricemanager.ItemSearchActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -47,7 +48,8 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                         startActivityForResult(startAmazonPriceManagerIntent, 10);
                         break;
                     case R.id.ermanBottomButton:
-                        //TODO: replace with erman module intent
+                        Intent startMusicLocal = new Intent(MainActivity.this, ErmanLoginActivity.class);
+                        startActivity(startMusicLocal);
                         break;
                     case R.id.stuartBottomButton:
                         //TODO: replace with stuart module intent
@@ -91,7 +93,8 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                 startActivityForResult(startAmazonPriceManagerIntent, 10);
                 break;
             case R.id.ermanButton:
-                //TODO: replace with erman module intent
+                Intent startMusicLocal = new Intent(MainActivity.this, ErmanLoginActivity.class);
+                startActivity(startMusicLocal);
                 break;
             case R.id.stuartButton:
                 //TODO: replace with stuart module intent

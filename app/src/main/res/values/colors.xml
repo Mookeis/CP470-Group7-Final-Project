@@ -12,4 +12,9 @@
     <color name="pink_pressed">#ec407a</color>
     <color name="blue_semi_transparent">#805677fc</color>
     <color name="blue_semi_transparent_pressed">#80738ffe</color>
+
+
+    <color name="ErmanloginBackground">#BE80FF</color>
+    <color name="ErmanloginButton">#7E51C2</color>
+    <color name="ErmantextHint">#E7E7E7</color>
 </resources>
