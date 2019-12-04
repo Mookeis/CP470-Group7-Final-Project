@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.cp470group7.launcherapp.TripPlanner.TripLogin;
 import com.cp470group7.launcherapp.pricemanager.ItemSearchActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                         //TODO: replace with erman module intent
                         break;
                     case R.id.stuartBottomButton:
+                        Intent startTripPlanner = new Intent(MainActivity.this, TripLogin.class);
+                        startActivity(startTripPlanner);
                         //TODO: replace with stuart module intent
                         break;
                     case R.id.anthonyBottomButton:
@@ -95,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                 break;
             case R.id.stuartButton:
                 //TODO: replace with stuart module intent
+                Intent startTripPlanner = new Intent(MainActivity.this, TripLogin.class);
+                startActivity(startTripPlanner);
                 break;
             case R.id.anthonyButton:
                 //TODO: replace with anthony module intent

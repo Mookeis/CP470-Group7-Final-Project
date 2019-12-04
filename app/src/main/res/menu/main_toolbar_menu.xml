@@ -15,7 +15,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/stuartButton"
-        android:title="@string/stuartTitle"
+        android:title="@string/tripPlannerTitle"
         android:icon="@drawable/baseline_shop_24"
         app:showAsAction="always" />
     <item
