@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:id="@+id/stuartLAY"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TripPlanner.TripMapsActivity" />
+    android:background="@drawable/map"
+    android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/libButton"
+        android:layout_width="37dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="170dp"
+        android:buttonTint="#000000"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uniButton" />
+
+    <RadioButton
+        android:id="@+id/uniButton"
+        android:layout_width="37dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="187dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="187dp"
+        android:layout_marginBottom="170dp"
+        android:buttonTint="#000000"
+        android:checked="false"
+        app:layout_constraintBottom_toTopOf="@+id/libButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stuartToolBarID" />
+
+    <RadioButton
+        android:id="@+id/commButton"
+        android:layout_width="37dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="329dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="45dp"
+        android:buttonTint="#000000"
+        android:checked="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stuartToolBarID" />
+
+    <RadioButton
+        android:id="@+id/musuemButton"
+        android:layout_width="37dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="344dp"
+        android:layout_marginBottom="422dp"
+        android:buttonTint="#000000"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stuartToolBarID" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/stuartToolBarID"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3497C9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="168dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/stuartDateSet"
+        android:layout_width="96dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/stuartDatePick"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/blue_semi_transparent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

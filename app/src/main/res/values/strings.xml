@@ -52,7 +52,25 @@
     <string name="tripLoginButton">Login</string>
     <string name="defEmail">email@domain.com</string>
     <string name="SavedEmail"> </string>
-
+    <string name="icon2">Get Information</string>
+    <string name="icon1"> Favourite List</string>
+    <string name="stuartToast"> To add an item to your favourites list have the item selected and using the dialog box select the check box, to unfavourite and item open the dialog box again and click the check box again, or click remove in the favourites list</string>
+    <string name="stuartAbout">Author: Stuart Isley Version Number: 1.1\nThis app works by selecting a button on the map image,
+    once that button is selected a dialog will appear giving you the information about that location. With the dialog you are able to add
+    that location to your favourites if you wish by selecting the check box in the dialog that appeared. You are able to view your favourites
+    by selecting the boat icon on the tool bar, and if you click on the name of something in your favourites it will be removed from there.
+    Due to an unforeseen error with the Google maps API caused the map to not load, a static image of a portion of the map to show the
+    capabilities of this application in a smaller scale. The locations able to be selected are the radio buttons on the map.</string>
+    <string name="stuartAdd">Add to Favourites</string>
+    <string name="stuartCancel">Cancel</string>
+    <string name="stuartReturn">Ok</string>
+    <string name="stuartName">Name:</string>
+    <string name="stuartDes">Description:</string>
+    <string name="stuartCoor">Coordinates (Lat,Long):</string>
+    <string name="stuartRating">Rating (out of 5):</string>
+    <string name="stuartDatePick">Set Date of Trip</string>
+    <string name="stuartTry">Favourite list would appear here</string>
+    <string name="stuartTry2">Unable to open the date picker fragment without crashing application</string>
 
     <string name="anthonyTitle">Anthony Title</string>
 

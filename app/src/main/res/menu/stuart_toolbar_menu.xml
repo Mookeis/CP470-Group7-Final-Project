@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/stuart_action_two"
+        android:icon="@drawable/baseline_info_24"
+        android:iconTint="@color/white"
+        android:orderInCategory="101"
+        android:title="@string/icon2"
+        app:showAsAction="always" />
+    <item android:id="@+id/stuart_settings"
+        android:title="@string/ErmanhelpText"
+        android:orderInCategory="104"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/stuart_action_one"
+        android:icon="@drawable/baseline_directions_boat_black_24"
+        android:iconTint="@color/white"
+        android:orderInCategory="100"
+        android:title="@string/icon1"
+        app:showAsAction="always" />
+</menu>
