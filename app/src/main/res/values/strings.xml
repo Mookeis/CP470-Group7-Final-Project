@@ -54,7 +54,27 @@
     <string name="SavedEmail"> </string>
 
 
-    <string name="anthonyTitle">Anthony Title</string>
+    <string name="anthonyTitle">MusicStreamingApp</string>
+    <string name="basttitle_activity_bast9100">StreamingApp</string>
+
+    <string name="bastaddInfo">Select a stream to add</string>
+    <string name="bastdeleteInfo">Select a stream to delete</string>
+
+
+    <string-array name="bastdefaultMusic">
+        <item>PopChannel</item>
+        <item>RockChannel</item>
+        <item>HeavyMetalChannel</item>
+        <item>ChristmasChannel</item>
+        <item>RapChannel</item>
+    </string-array>
+
+    <string name="bastabout">About</string>
+    <string name="bastok">Yes</string>
+    <string name="bastclose">Close</string>
+    <string name="bastdialog_title">App Info</string>
+    <string name="bastdialog_message">This application is a base for a future streaming app. The app does
+    not currently stream, but holds a general layout for what a streaming app could look like.</string>
 
 
     <string name="joshTitle">Joshua Title</string>
@@ -91,6 +111,8 @@
     <string name="ErmanhelpText">Help</string>
     <string name="Ermantitle_activity_erman_maps">Map</string>
     <string name="title_activity_erman_maps">Map</string>
+
+
 
 
 </resources>

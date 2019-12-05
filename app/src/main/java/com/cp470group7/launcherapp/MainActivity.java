@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.cp470group7.launcherapp.MusicStreamerBast9100.bast9100;
 import com.cp470group7.launcherapp.musicLocal.ErmanLoginActivity;
 import com.cp470group7.launcherapp.TripPlanner.TripLogin;
 import com.cp470group7.launcherapp.pricemanager.ItemSearchActivity;
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                     case R.id.anthonyBottomButton:
                         //TODO: replace with anthony module intent
                         menuItem.setChecked(true);
+                        Intent startBastMusicStreamer = new Intent(MainActivity.this,bast9100.class);
+                        startActivity(startBastMusicStreamer);
                         break;
                     case R.id.joshBottomButton:
                         menuItem.setChecked(true);
@@ -112,7 +115,8 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                 startActivity(startTripPlanner);
                 break;
             case R.id.anthonyButton:
-                //TODO: replace with anthony module intent
+                Intent startBastMusicStreamer = new Intent(MainActivity.this,bast9100.class);
+                startActivity(startBastMusicStreamer);
                 break;
             case R.id.joshButton:
                 //TODO: replace with joshua module intent

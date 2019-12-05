@@ -73,6 +73,14 @@
         <activity android:name=".pricemanager.ItemResultsActivity" />
         <activity android:name=".pricemanager.ListingsActivity" />
         <activity android:name=".pricemanager.WatchlistActivity" />
+
+
+        <activity android:name=".MusicStreamerBast9100.DeleteMusicItem"></activity>
+        <activity android:name=".MusicStreamerBast9100.AddMusicStream" />
+        <activity
+            android:name=".MusicStreamerBast9100.bast9100"
+            android:label="@string/basttitle_activity_bast9100"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
