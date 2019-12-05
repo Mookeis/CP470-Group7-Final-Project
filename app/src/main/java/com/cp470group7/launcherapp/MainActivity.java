@@ -69,10 +69,6 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
                         Intent startBastMusicStreamer = new Intent(MainActivity.this,bast9100.class);
                         startActivity(startBastMusicStreamer);
                         break;
-                    case R.id.joshBottomButton:
-                        menuItem.setChecked(true);
-                        //TODO: replace with joshua module intent
-                        break;
                 }
                 return false;
             }
@@ -117,9 +113,6 @@ public class MainActivity extends AppCompatActivity implements MainPageFragment.
             case R.id.anthonyButton:
                 Intent startBastMusicStreamer = new Intent(MainActivity.this,bast9100.class);
                 startActivity(startBastMusicStreamer);
-                break;
-            case R.id.joshButton:
-                //TODO: replace with joshua module intent
                 break;
         }
         return true;

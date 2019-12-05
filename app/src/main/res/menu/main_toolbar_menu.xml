@@ -23,11 +23,6 @@
         android:title="@string/anthonyTitle"
         android:icon="@drawable/baseline_music_video_24"
         app:showAsAction="always" />
-    <item
-        android:id="@+id/joshButton"
-        android:title="@string/joshTitle"
-        android:icon="@drawable/baseline_shop_24"
-        app:showAsAction="always" />
 
     <item
         android:id="@+id/aboutButton"
