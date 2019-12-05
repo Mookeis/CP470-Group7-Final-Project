@@ -21,7 +21,7 @@
     <item
         android:id="@+id/anthonyButton"
         android:title="@string/anthonyTitle"
-        android:icon="@drawable/baseline_shop_24"
+        android:icon="@drawable/baseline_music_video_black_18dp"
         app:showAsAction="always" />
     <item
         android:id="@+id/joshButton"

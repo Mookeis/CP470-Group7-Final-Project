@@ -19,7 +19,7 @@
     <item
         android:id="@+id/anthonyBottomButton"
         android:title="@string/anthonyTitle"
-        android:icon="@drawable/baseline_shop_24"
+        android:icon="@drawable/baseline_music_video_black_18dp"
          />
     <item
         android:id="@+id/joshBottomButton"
